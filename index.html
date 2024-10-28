@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="contenedor">
+        <header>
+            <ul id="navPrincipal">
+                <li id="btnSeccionInicio" class="btn local persona localpersona">
+                  <a>Inicio</a>
+                </li>
+                <li id="btnSeccionRegistro" class="btn persona">
+                  <a>Registrarse</a>
+                </li>
+                <li id="btnSeccionLogin" class="btn local persona localpersona">
+                  <a>Login</a>
+                </li>
+                <li id="btnSeccionHomeLocal" class="btn local">
+                  <a>Home Screen Local</a>
+                </li>
+                <li id="btnSeccionReservasLocal" class="btn local">
+                  <a>Reservas</a>
+                </li>
+                <li id="btnSeccionReservasPersona" class="btn persona">
+                  <a>Reservas</a>
+                </li>
+              </ul>
+        </header>
+        
+        <div id="seccionInicio" class="seccion">
+            <h1>BIENVENIDO</h1>
+        </div>
+
+        <div id="seccionRegistro" class="seccion">
+            <h1>Registrarse</h1>
+            <label for="nombreCliente">Nombre:</label>
+            <input type="text" name="nombreCliente" id="nombreCliente">
+            <p>(solamente caracteres alfabéticos)</p><br>
+            <label for="usuarioCliente">Usuario:</label>
+            <input type="text" name="usuarioCliente" id="usuarioCliente">
+            <p>(solamente caracteres alfabéticos)</p><br>
+            <label for="pswdCliente">Contraseña:</label>
+            <input type="password" name="pswdCliente" id="pswdCliente">
+            <p>(mínimo de 6 caracteres, incluir una mayúscula, una minúscula y un número)</p><br>
+        
+            <button class="boton" id="botonRegistrarse">Registrarse</button><br><br>
+            <button class="boton" id="botonBorrarRegistros">Borrar todos los usuarios registrados</button><br><br>
+            
+        </div>
+    
+        <div id="seccionLogin" class="seccion">
+            <div>
+                <label for="usuario">Usuario:</label>
+                <input type="text" name="usuario" id="usuario"><br>
+            
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" name="contraseña" id="contraseña"><br>
+            
+                <label for="tipoUsuario">Tipo de usuario:</label>
+                <select name="tipoUsuario" id="tipoUsuario">
+                    <option value="" selected>Seleccione el tipo de usuario...</option>
+                    <option value="L">Local</option>
+                    <option value="P">Persona</option>
+                </select> <br>
+            </div>
+        
+            <button class="boton" id="botonIngresar">Ingresar</button><br><br>
+            <button class="boton" id="botonRegistro">Registrarse</button><br><br>
+        </div>
+    
+        <div id="seccionHomeLocal" class="seccion">
+            <h1 id="nombreLocal">Local "ejemplo"</h1><br>
+            <h3 id="tipoLocal">Tipo de local: ejemplo</h3>
+            <h3 id="direccionLocal">Direccion: Calle Falsa123</h3>
+            <h3 id="idLocal">Numero identificador: 123</h3>
+            <img id="fotoLocal" src="" alt="imgLocal">
+    
+            <h3>Opciones:</h3><br>
+            <label for="disponibilidad">Habilitar disponibilidad:</label>
+            <select name="disponibilidad" id="disponibilidad">
+                <option value="habilitado">Habilitado</option>
+                <option value="deshabilitado">Deshabilitado</option>
+            </select>
+    
+            <label for="cupoMax">Cupo máximo:</label>
+            <input type="number" name="cupoMax" id="cupoMax"><br>
+            <button class="boton" id="botonGuardarDatosLocal">Guardar Cambios</button><br><br>
+    
+            <h3>Información estadística</h3>
+    
+            <p id="porcentajeLocal"></p>
+            <p id="promedioLocal"></p>
+            <p id="totalReservasLocal"></p>
+            <ul id="promedioTodosLocales"></ul>
+            <br>
+    
+        </div>
+    
+        <div id="seccionReservasLocal" class="seccion">
+            <h1 id="nombreLocal2">Local "ejemplo"</h1><br>
+    
+            <h3>Reservas</h3><br>
+            <button class="boton" id="botonListarReservas">Mostrar reservas</button><br>
+            <h6>Buscar reserva por nombre del cliente</h6>
+            <label for="clienteIngresado">Cliente:</label>
+            <input type="text" name="clienteIngresado" id="clienteIngresado">
+            <button class="boton" id="botonBuscarReserva">Buscar</button><br>
+    
+            <ul id="listadoReservasPendientes"></ul><br>
+        
+            <button class="boton" id="botonGuardarCambiosReservasLocal">Guardar cambios</button>
+        </div>
+    
+        <div id="seccionReservasPersona" class="seccion">
+            <h1>Reservas</h1>
+    
+            <h3>Realizar solicitud de reserva</h3>
+            <label for="localReserva">Local:</label>
+            <select name="localReserva" id="localReserva">
+                
+            </select><br>
+    
+            <label for="cuposReserva">Cupos:</label>
+            <input type="number" name="cuposReserva" id="cuposReserva"><br>
+    
+            <button class="boton" id="botonSolicitarReserva">Solicitar reserva</button><br><br>
+    
+            <h3>Reservas pendientes</h3>
+    
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Local</th>
+                        <th>Estado</th>
+                        <th>Foto</th><img src="" alt="">
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody id="listadoReservas">
+            
+                </tbody>
+            </table><br>
+            <!-- <button class="boton" id="botonCancelarReserva1">Cancelar reserva</button>
+            <h3>Reservas finalizadas</h3>
+    
+            <ol>
+                <li>
+                    <p>Nombre Local</p>
+                    <p>Fecha reserva</p>
+                    
+                    <button class="boton" id="botonCalificarReserva">Calificar reserva</button>
+                </li>
+            </ol><br> -->
+    
+            <h3>Información estadística:</h3>
+    
+            <ol>
+                <li>
+                    <p>Nombre Local</p>
+                    <p>Total reservas: 1</p>
+                    <p>Porcentaje del usuario: 1</p>
+                </li>
+            </ol>
+    
+            <p>Local en el que hice mas reservas: Local "ejemplo"</p>
+        </div>
+    </div>
+    
+    <script src="/funciones.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>

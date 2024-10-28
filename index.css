@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap");
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+/* start commented backslash hack \*/
+
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+/* close commented backslash hack */
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+  background-color: #ffac00;
+}
+
+ul {
+    padding-inline-start: 0px;
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+  font-family: "Roboto Flex", sans-serif;
+  margin-block-start: 0px;
+}
+
+h4 {
+  text-align: right;
+}
+
+
+
+
+#contenedor {
+  width: 1000px;
+  background-color: #ebd495;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+label {
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+textarea {
+  min-height: 80px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.boton {
+    background: #3177FF;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    height: 1.875rem;
+    line-height: 1rem;
+    display: inline-block;
+}
+
+#promedioTodosLocales,
+#listadoReservasPendientes {
+  color: black;
+}
+
+#navPrincipal {
+  margin-top: 5px;
+  text-align: center;
+}
+
+#navPrincipal ul {
+    padding-inline-start: 0px;
+}
+
+#navPrincipal li {
+  font-family: "Roboto Flex", sans-serif;
+  list-style-type: none;
+  border-bottom: 2px solid #fffaff;
+  margin: 5px;
+  display: inline-block;
+  color: #fffaff;
+  text-align: center;
+}
+
+#seccionInicio {
+  text-align: center;
+}
+
+header {
+  background-color: #303036;
+  display: block;
+}
+
+.seccion {
+    display: block;
+    text-align: left;
+    padding: 5px 50px 50px 50px;
+}
+
+
+
+
+input,
+select,
+textarea {
+  background-color: #303036;
+  color: #fffaff;
+  border: 1px solid #ccc;
+  font-family: "Roboto Flex", sans-serif;
+  border-radius: 5px;
+}
+
+input[type="button"] {
+  background-color: #303036;
+  color: #fff;
+}
